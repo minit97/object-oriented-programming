@@ -6,7 +6,7 @@ public class PraticeService {
         Member mem = findOne(id);
         if (mem == null) return AuthResult.NO_MATCH;
 
-        if (mem.getVerificationEmailStatus() != 2) {
+        if (!mem.isEmailVerified()) {
             return AuthResult.NO_EMAIL_VERIFIED;
         }
 

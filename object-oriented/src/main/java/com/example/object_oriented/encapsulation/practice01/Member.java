@@ -9,5 +9,7 @@ public class Member {
     private String password;
     private int verificationEmailStatus;
 
-
+    public boolean isEmailVerified() {
+        return verificationEmailStatus == 2;
+    }
 }
